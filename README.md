@@ -97,7 +97,8 @@ If only the nondimensional stress-stretch response of the network is desired, on
 	from chain_breaking_polymer_networks import *
 
 	# Create the single-chain model
-	single_chain_model = Morse_FJC(N_b = 1, N_b_H = 8, kappa = 2e2, kappa_H = 5e2, beta_u_b = 1e2, k_0 = 1e-2, beta_Delta_Psi_0 = 2)
+	single_chain_model = Morse_FJC(N_b = 1, N_b_H = 8, kappa = 2e2, kappa_H = 5e2, \
+		beta_u_b = 1e2, k_0 = 1e-2, beta_Delta_Psi_0 = 2)
 
 	# Plot the single-chain model
 	plotter_object = plotter()
@@ -185,9 +186,11 @@ If only the nondimensional stress-stretch response of the network is desired, on
 
 	# Apply the deformation and solve
 	results_1 = deform_network(F, 'uniaxial', total_time_in_seconds, single_chain_model_1, \
-		max_F_dot = strain_rate, use_spatial_grid = False, ignore_yield = True, nondimensional_timestep_suggestion = 1e-1).solve()
+		max_F_dot = strain_rate, use_spatial_grid = False, ignore_yield = True, \
+		nondimensional_timestep_suggestion = 1e-1).solve()
 	results_2 = deform_network(F, 'uniaxial', total_time_in_seconds, single_chain_model_2, \
-		max_F_dot = strain_rate, use_spatial_grid = False, ignore_yield = True, nondimensional_timestep_suggestion = 1e-1).solve()
+		max_F_dot = strain_rate, use_spatial_grid = False, ignore_yield = True, \
+		nondimensional_timestep_suggestion = 1e-1).solve()
 
 	# Compute the total stress and place into a results tuple
 	beta_sigma_over_n_2 = np.interp(results_1[1], results_2[1], results_2[5])
