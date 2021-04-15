@@ -45,7 +45,7 @@ creates an ideal chain model with 88 links. The single-chain models are nearly f
 * the nondimensional single-chain mechanical response, `eta(gamma)`
 * the nondimensional equilibrium probability density distribution of intact chain extensions, `P_A_eq(gamma)`
 * the nondimensional equilibrium radial distribution function, `g_A_eq(gamma)`
-* the net forward reaction rate coefficient function, `k(gamma)`
+* the net forward reaction rate coefficient function, `k(gamma)` (is the only function with units, 1/seconds)
 
 Example: for the ideal chain model above,
 
@@ -55,16 +55,21 @@ returns the probability density that a chain is both intact and at a nondimensio
 
 ## network
 
-some suitable deformation, as well as the total time in seconds (or use a deformation rate of unity and the time is nondimensional) and the deformation mode (BC) (currently supports uniaxial and equibiaxial stresses)
+The `network` file contains a few classes, most notably the `deform_network` class. Given an applied deformation, such as
+
+	def F(t): return 1 + t
+	
+the total testing time in seconds, the deformation mode (currently supports 'uniaxial' and 'equibiaxial' stress; the deformation is of course incompressible), and a, the `deform_network` class is used to create a network model from the single-chain model. Here we apply uniaxial stress for 3 seconds:
 
 	network_model = deform_network(F, 'uniaxial', 3, single_chain_model, ignore_yield = True, use_spatial_grid = False)
 	
-optional keyword arguments later
-this is where all the magic happens -- complicated solvers, memory shit, more on methods later too
+Since this initialization also prepares the solution method, many optional keyword arguments are available. Here we ignore the breaking of chains via meeting a yield surface at some critical extension (the ideal chain model is infinitely extensible), and we choose to utilize quadrature for spatial integrations rather than a pre-specified spatial grid; the converse in either case is the default. The examples that follow illustrate the critical aspects of creating the network model, and more information can be found in the helpful comments in the `network.py` file, as well as in the Appendix of our paper.
+
+The results (stress, total probability that a chain is intact, etc.) are solved for over the specified testing time using
 
 	results = network_model.solve(csv_directory = './')
 	
-optional keyword argument csv_directory to write a .csv file with the results
+where the optional keyword argument csv_directory here is used to write the results to a .csv file. The default is None, and no .csv file is written.
 
 ## plotting
 
