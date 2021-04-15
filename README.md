@@ -93,4 +93,141 @@ If only the nondimensional stress-stretch response of the network is desired, on
 
 ## Example 1
 
+	# Import the library
+	from chain_breaking_polymer_networks import *
+
+	# Create the single-chain model
+	single_chain_model = Morse_FJC(N_b = 1, N_b_H = 8, kappa = 2e2, kappa_H = 5e2, beta_u_b = 1e2, k_0 = 1e-2, beta_Delta_Psi_0 = 2)
+
+	# Plot the single-chain model
+	plotter_object = plotter()
+	plotter_object.plot_single_chain(single_chain_model)
+
+	# Define the deformation
+	strain_rate = 1
+	maximum_strain = 8
+	total_time_in_seconds = 2*maximum_strain/strain_rate
+	def F(t):
+		return 1 + strain_rate*t*np.heaviside(maximum_strain - strain_rate*t, 0.5) \
+			+ (2*maximum_strain - strain_rate*t)*np.heaviside(strain_rate*t - maximum_strain, 0.5)
+
+	# Plot the deformation
+	plotter_object.plot_deformation(F, total_time_in_seconds)
+
+	# Apply the deformation and solve
+	network_model = deform_network(F, 'uniaxial', total_time_in_seconds, single_chain_model, num_grid_suggestion = 513)
+	results = network_model.solve(csv_directory = './')
+
+	# Plot the results
+	plotter_object.plot_results(network_model, results)
+
 ![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_0/sigma(F).png?raw=true)
+
+## Example 2
+
+	# Import the library
+	from chain_breaking_polymer_networks import *
+
+	# Create the single-chain model
+	single_chain_model = ideal()
+
+	# Create the relaxation function
+	relaxation_function = Long_et_al_2014(alpha = 2.6, t_R = 0.6, x_p = 0.1)
+
+	# Define the deformation
+	strain_rate = 0.03
+	maximum_strain = 1
+	total_time_in_seconds = 57
+	def F(t):
+		return 1 + strain_rate*t*np.heaviside(maximum_strain - strain_rate*t, 0.5) \
+			+ (2*maximum_strain - strain_rate*t)*np.heaviside(strain_rate*t - maximum_strain, 0.5)
+
+	# Apply the deformation and solve
+	network_model = deform_network(F, 'uniaxial', total_time_in_seconds, single_chain_model, \
+		relaxation_function = relaxation_function, use_spatial_grid = False, ignore_yield = True)
+	results = network_model.solve()
+
+	# Plot the results
+	plotter().plot_results(network_model, results, n_over_beta = 24.15, use_nominal = True)
+
+## Example 3
+
+	# Import the library
+	from chain_breaking_polymer_networks import *
+
+	# Create the single-chain models
+	x_p = 5.85e-2
+	single_chain_model_1 = EFJC(N_b = 50, kappa = 40, k_0 = 0.12)
+	single_chain_model_2 = EFJC(N_b = 50, kappa = 40)
+
+	# Define the deformation
+	strain_rate = 0.01
+	maximum_strain = 1.55
+	total_time_in_seconds = maximum_strain/strain_rate
+	def F(t):
+		return 1 + strain_rate*t
+
+	# Apply the deformation and solve
+	results_1 = deform_network(F, 'uniaxial', total_time_in_seconds, single_chain_model_1, \
+		max_F_dot = strain_rate, use_spatial_grid = False, ignore_yield = True, nondimensional_timestep_suggestion = 1e-1).solve()
+	results_2 = deform_network(F, 'uniaxial', total_time_in_seconds, single_chain_model_2, \
+		max_F_dot = strain_rate, use_spatial_grid = False, ignore_yield = True, nondimensional_timestep_suggestion = 1e-1).solve()
+
+	# Compute the total stress and place into a results tuple
+	beta_sigma_over_n_2 = np.interp(results_1[1], results_2[1], results_2[5])
+	beta_sigma_over_n_tot = x_p*beta_sigma_over_n_2 + (1 - x_p)*results_1[5]
+	results = results_1[0], results_1[1], results_1[2], results_1[3], results_1[4], beta_sigma_over_n_tot
+
+	# Plot the results
+	plotter().plot_results(None, results, n_over_beta = 37.78, use_nominal = True)
+
+## Example 4
+
+	# Import the library
+	from chain_breaking_polymer_networks import *
+
+	# Create the single-chain model
+	single_chain_model = Morse_FJC(N_b = 1, N_b_H = 38, beta_u_b = 61.57, kappa = 9e3, 
+		kappa_H = 6e3, k_0 = 0, beta_Delta_Psi_0 = 5, varsigma = 4)
+
+	# Volumetric swelling ratio
+	J_sw = 15.625
+
+	# Plot the single-chain model
+	plotter_object = plotter()
+	plotter_object.plot_single_chain(single_chain_model, J_sw = J_sw)
+
+	# Define the deformation
+	lambda_dot = 0.025
+	total_time_in_seconds = 15/lambda_dot
+	def F(t):
+		return 1 + lambda_dot*t*np.heaviside(0.5 - lambda_dot*t, 0.5) \
+			+ (1 - lambda_dot*t)*np.heaviside(lambda_dot*t - 0.5, 0.5)*np.heaviside(1 - lambda_dot*t, 0.5) \
+			+ (lambda_dot*t - 1)*np.heaviside(lambda_dot*t - 1, 0.5)*np.heaviside(2 - lambda_dot*t, 0.5) \
+			+ (3 - lambda_dot*t)*np.heaviside(lambda_dot*t - 2, 0.5)*np.heaviside(3 - lambda_dot*t, 0.5) \
+			+ (lambda_dot*t - 3)*np.heaviside(lambda_dot*t - 3, 0.5)*np.heaviside(4.5 - lambda_dot*t, 0.5) \
+			+ (6 - lambda_dot*t)*np.heaviside(lambda_dot*t - 4.5, 0.5)*np.heaviside(6 - lambda_dot*t, 0.5) \
+			+ (lambda_dot*t - 6)*np.heaviside(lambda_dot*t - 6, 0.5)*np.heaviside(8 - lambda_dot*t, 0.5) \
+			+ (10 - lambda_dot*t)*np.heaviside(lambda_dot*t - 8, 0.5)*np.heaviside(10 - lambda_dot*t, 0.5) \
+			+ (lambda_dot*t - 10)*np.heaviside(lambda_dot*t - 10, 0.5)*np.heaviside(12.5 - lambda_dot*t, 0.5) \
+			+ (15 - lambda_dot*t)*np.heaviside(lambda_dot*t - 12.5, 0.5)*np.heaviside(15 - lambda_dot*t, 0.5)
+
+	# Plot the deformation
+	plotter_object.plot_deformation(F, total_time_in_seconds)
+
+	# Apply the deformation and solve
+	deformation_object = deform_network(F, 'uniaxial', total_time_in_seconds, single_chain_model, J_sw = J_sw)
+	results = deformation_object.solve()
+
+	# Combine the results with a Neo-Hookean model for the filler network
+	modulus_TN = 1.5
+	n_over_beta_1 = 0.2
+	n_over_beta_23 = modulus_TN/3 - n_over_beta_1
+	F = results[1]
+	sigma_1 = n_over_beta_1/single_chain_model.P_A_tot_eq*results[5]
+	F_stress_23 = F, n_over_beta_23*(F**2 - 1/F)
+	F_stress_tot = F, F_stress_23[1] + sigma_1
+
+	# Plot the results with the experimental data
+	plotter_object.plot_results(deformation_object, results, n_over_beta = n_over_beta_1, \
+		F_stress_1 = F_stress_23, F_stress_2 = F_stress_tot)
