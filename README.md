@@ -31,6 +31,10 @@ Finally, install this package:
 
 # Basic usage
 
+The package is best imported using:
+
+	from chain_breaking_polymer_networks import *
+
 ## single_chain
 
 ## network
