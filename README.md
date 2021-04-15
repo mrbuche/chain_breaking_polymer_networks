@@ -57,7 +57,7 @@ returns the probability density that a chain is both intact and at a nondimensio
 
 some suitable deformation, as well as the total time in seconds (or use a deformation rate of unity and the time is nondimensional) and the deformation mode (BC) (currently supports uniaxial and equibiaxial stresses)
 
-	network_model = deform_network(F, 'uniaxial', 3, single_chain_model)
+	network_model = deform_network(F, 'uniaxial', 3, single_chain_model, ignore_yield = True, use_spatial_grid = False)
 	
 optional keyword arguments later
 this is where all the magic happens -- complicated solvers, memory shit, more on methods later too
@@ -83,11 +83,9 @@ and all the results from deforming the network using
 If only the nondimensional stress-stretch response of the network is desired, one can use
 
 	plotter_object.plot_results(None, results)
-	
-which would then output:
-	
-![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_0/sigma(F).png?raw=true)
 
 # Examples
 
 ## Example 1
+
+![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_0/sigma(F).png?raw=true)
