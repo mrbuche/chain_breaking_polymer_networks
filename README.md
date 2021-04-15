@@ -80,9 +80,11 @@ and all the results from deforming the network using
 
 	plotter_object.plot_results(network_model, results)
 	
-If only the stress-stretch response of the network is desired, one can use
+If only the nondimensional stress-stretch response of the network is desired, one can use
 
 	plotter_object.plot_results(None, results)
+	
+which would then output:
 	
 ![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_0/sigma(F).png?raw=true)
 
