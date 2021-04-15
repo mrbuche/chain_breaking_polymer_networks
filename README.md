@@ -164,6 +164,8 @@ If only the nondimensional stress-stretch response of the network is desired, on
 	# Plot the results
 	plotter().plot_results(network_model, results, n_over_beta = 24.15, use_nominal = True)
 
+![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_2/sigma_hpt(F).png?raw=true)
+
 ## Example 3
 
 	# Import the library
@@ -194,6 +196,8 @@ If only the nondimensional stress-stretch response of the network is desired, on
 
 	# Plot the results
 	plotter().plot_results(None, results, n_over_beta = 37.78, use_nominal = True)
+
+![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_3/sigma(F).png?raw=true)
 
 ## Example 4
 
@@ -245,3 +249,5 @@ If only the nondimensional stress-stretch response of the network is desired, on
 	# Plot the results with the experimental data
 	plotter_object.plot_results(deformation_object, results, n_over_beta = n_over_beta_1, \
 		F_stress_1 = F_stress_23, F_stress_2 = F_stress_tot)
+
+![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_4/sigma(F).png?raw=true)
