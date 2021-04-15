@@ -69,7 +69,7 @@ The results (stress, total probability that a chain is intact, etc.) are solved 
 
 	results = network_model.solve(csv_directory = './')
 	
-where the optional keyword argument csv_directory here is used to write the results to a .csv file. The default is None, and no .csv file is written.
+where the optional keyword argument here is used to write the results to a .csv file. The default is None (no .csv file is written).
 
 ## plotting
 
@@ -77,7 +77,7 @@ The object used for quick plotting is created using
 
 	plotter_object = plotter(plot_directory = './')
 
-where the default for the optional keyword argument is that shown (the current directory). The plotter() class is the only instance requiring matplotlib in this package. The single-chain model functions can be plotted using
+where the default for the optional keyword argument is shown (the current directory). The plotter() class is the only instance requiring matplotlib in this package. The single-chain model functions can be plotted using
 
 	plotter_object.plot_single_chain(single_chain_model)
 	
