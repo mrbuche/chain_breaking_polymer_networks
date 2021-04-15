@@ -37,6 +37,12 @@ The package is best imported using:
 
 ## single_chain
 
+The package contains a library of 'single_chain' classes corresponding to different single-chain models. For example, 
+
+	single_chain_model = ideal(N_b = 88)
+	
+creates an ideal chain model with 88 links. The single-chain models are fully nondimensional (model parameters, inputs and outputs for functions) and they use keyword arguments for the model parameters, though not all parameters are optional (see source code, or examples). The single-chain models contain: the single-chain mechanical response $`\eta(\gamma)`$, the equilibrium distribution, and <img src="https://render.githubusercontent.com/render/math?math=\eta(\gamma)">
+
 ## network
 
 ## plotting
