@@ -57,7 +57,7 @@ returns the probability density that a chain is both intact and at a nondimensio
 
 some suitable deformation, as well as the total time in seconds (or use a deformation rate of unity and the time is nondimensional) and the deformation mode (BC) (currently supports uniaxial and equibiaxial stresses)
 
-	network_model = network(F(t), 'uniaxial', 3, single_chain_model)
+	network_model = deform_network(F, 'uniaxial', 3, single_chain_model)
 	
 optional keyword arguments later
 this is where all the magic happens -- complicated solvers, memory shit, more on methods later too
