@@ -121,7 +121,21 @@ If only the nondimensional stress-stretch response of the network is desired, on
 	# Plot the results
 	plotter_object.plot_results(network_model, results)
 
-![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_0/sigma(F).png?raw=true)
+![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_1/eta.png?raw=true)
+
+![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_1/P_A_eq.png?raw=true)
+
+![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_1/g_A_eq.png?raw=true)
+
+![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_1/k.png?raw=true)
+
+![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_1/sigma(t).png?raw=true)
+
+![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_1/sigma(F).png?raw=true)
+
+![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_1/P_A_tot(t).png?raw=true)
+
+![alt text](https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_1/d_P_A_tot_dt(t).png?raw=true)
 
 ## Example 2
 
