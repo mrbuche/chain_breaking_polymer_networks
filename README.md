@@ -55,7 +55,7 @@ returns the probability density that a chain is both intact and at a nondimensio
 
 ## network
 
-The `network` file contains a few classes, most notably the `deform_network` class. Given an applied deformation, such as
+The `network` file contains a few classes, most notably the `deform_network` class. Given an applied deformation, like
 
 	def F(t): return 1 + t
 	
