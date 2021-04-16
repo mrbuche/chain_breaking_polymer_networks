@@ -6,7 +6,7 @@ It was written for Python 3, and uses some typical packages: numpy, scipy, and m
 
 # Installation
 
-The package is on [PyPI](https://pypi.org/project/chain-breaking-polymer-networks/) and may be installed using `pip`:
+The package is on [PyPI](https://pypi.org/project/chain-breaking-polymer-networks/) and is installed using `pip`:
 
 	pip install chain_breaking_polymer_networks
 
