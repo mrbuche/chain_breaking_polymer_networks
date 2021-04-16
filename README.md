@@ -6,30 +6,9 @@ It was written for Python 3, and uses some typical packages: numpy, scipy, and m
 
 # Installation
 
-The package is on [PyPI](https://pypi.org/project/chain-breaking-polymer-networks/) and may be installed using `pip3`:
+The package is on [PyPI](https://pypi.org/project/chain-breaking-polymer-networks/) and may be installed using `pip`:
 
-	pip3 install chain_breaking_polymer_networks
-
-## Extended installation
-
-Start by updating and then install Python 3:
-
-	sudo apt-get update
-	sudo apt-get install python3
-	
-Next, install the pip package manger,
-
-	sudo apt-get install python3-pip
-	
-and use `pip3` to install the packages that this packages will use:
-
-	pip3 install numpy
-	pip3 install scipy
-	pip3 install matplotlib
-	
-Finally, install this package:
-	
-	pip3 install chain_breaking_polymer_networks
+	pip install chain_breaking_polymer_networks
 
 # Basic usage
 
