@@ -1,7 +1,9 @@
 # chain_breaking_polymer_networks
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4699349.svg)](https://doi.org/10.5281/zenodo.4699349)
 
-This is the Python package corresponding to "Chain breaking in the statistical mechanical constitutive theory of polymer networks" by Michael R. Buche and Meredith N. Silberstein, 2021.
+[![arXiv:2104.08866](https://mbuche.github.io/web/cond-mat.soft%20arXiv%202104.08866.svg)](https://arxiv.org/abs/2104.08866)
+
+This is the Python package corresponding to "Chain breaking in the statistical mechanical constitutive theory of polymer networks" by Michael R. Buche and Meredith N. Silberstein, 2021. Preprint on arXiv at
 
 It was written for Python 3, and uses some typical packages: numpy, scipy, and matplotlib.
 
