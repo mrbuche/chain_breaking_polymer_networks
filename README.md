@@ -6,13 +6,13 @@ This is the Python package corresponding to "Chain breaking in the statistical m
 
 [![arXiv:2104.08866](https://mbuche.github.io/web/badgearXiv210408866.svg)](https://arxiv.org/abs/2104.08866) 
 
-It was written for Python 3, and uses some typical packages: numpy, scipy, and matplotlib.
-
 # Installation
 
 The package is on [PyPI](https://pypi.org/project/chain-breaking-polymer-networks/) and can be installed using `pip`:
 
 	pip install chain_breaking_polymer_networks
+
+It was written for Python 3, and uses some typical packages: numpy, scipy, and matplotlib.
 
 # Basic usage
 
