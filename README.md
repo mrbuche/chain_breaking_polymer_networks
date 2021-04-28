@@ -1,10 +1,10 @@
 # chain_breaking_polymer_networks
 
-[![DOI:10.5281/zenodo.4699349](https://zenodo.org/badge/DOI/10.5281/zenodo.4699349.svg)](https://doi.org/10.5281/zenodo.4699349) &nbsp; [![GitHub release](https://img.shields.io/github/v/release/mbuche/chain_breaking_polymer_networks.svg)](https://github.com/mbuche/chain_breaking_polymer_networks/releases/) &nbsp; [![PyPI pyversions](https://img.shields.io/pypi/pyversions/chain-breaking-polymer-networks.svg)](https://pypi.org/project/chain-breaking-polymer-networks/) &nbsp; [![GitHub license](https://img.shields.io/github/license/mbuche/chain_breaking_polymer_networks.svg)](https://github.com/mbuche/chain_breaking_polymer_networks/blob/master/LICENSE)
+[![DOI:10.5281/zenodo.4699349](https://mbuche.github.io/web/badges/zenodo.4699349.svg)](https://doi.org/10.5281/zenodo.4699349) &nbsp; [![GitHub release](https://img.shields.io/github/v/release/mbuche/chain_breaking_polymer_networks.svg)](https://github.com/mbuche/chain_breaking_polymer_networks/releases/) &nbsp; [![PyPI pyversions](https://img.shields.io/pypi/pyversions/chain-breaking-polymer-networks.svg)](https://pypi.org/project/chain-breaking-polymer-networks/) &nbsp; [![GitHub license](https://img.shields.io/github/license/mbuche/chain_breaking_polymer_networks.svg)](https://github.com/mbuche/chain_breaking_polymer_networks/blob/master/LICENSE)
 
 This is the Python package corresponding to "Chain breaking in the statistical mechanical constitutive theory of polymer networks" by Michael R. Buche and Meredith N. Silberstein, 2021.
 
-[![arXiv:2104.08866](https://mbuche.github.io/web/badgearXiv210408866.svg)](https://arxiv.org/abs/2104.08866) 
+[![arXiv:2104.08866](https://mbuche.github.io/web/badges/badgearXiv210408866.svg)](https://arxiv.org/abs/2104.08866) 
 
 # Installation
 
