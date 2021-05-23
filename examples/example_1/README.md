@@ -77,7 +77,7 @@ Using the same plotting object,
 	# Plot the results
 	plotter_object.plot_results(network_model, results)
 	
-<table border="0">
+<table>
 	<tr>
 		<td> 
 			<img src="https://github.com/mbuche/chain_breaking_polymer_networks/blob/main/examples/example_1/sigma(F).png" alt="sigma(F)" style="width: 250px;"/>
