@@ -68,7 +68,7 @@ Using the same plotting object, this applied stretch is plotted as a function of
 	</tr>
 </table>
 	
-## Network model, results
+## Network model and results
 
 The model for the network is created by simultaneously specifying the applied stretch and traction boundary condition, the total time, the single-chain model, and increasing the suggestion for the number of spatial grid points in each direction:
 
