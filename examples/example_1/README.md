@@ -68,13 +68,15 @@ Using the same plotting object, this applied stretch is plotted as a function of
 	</tr>
 </table>
 	
-## Network model and results
+## Network model
 
 The model for the network is created by simultaneously specifying the applied stretch and traction boundary condition, the total time, the single-chain model, and increasing the suggestion for the number of spatial grid points in each direction:
 
 	network_model = deform_network(F, 'uniaxial', total_time_in_seconds, single_chain_model, num_grid_suggestion = 513)
+	
+## Results
 
-This model is solved and results are returned as an object, while also writing these results to a .csv file in the local directory:
+The network model is solved and results are returned as a tuple, while also writing these results to a .csv file in the local directory:
 	
 	results = network_model.solve(csv_directory = './')
 
