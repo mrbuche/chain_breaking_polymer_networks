@@ -12,7 +12,7 @@ The package is on [PyPI](https://pypi.org/project/chain-breaking-polymer-network
 
 	pip install chain_breaking_polymer_networks
 
-It was written for Python 3, and uses some typical packages: numpy, scipy, and matplotlib.
+It was written for Python 3, and uses some typical packages: `numpy`, `scipy`, and `matplotlib`.
 
 # Basic usage
 
@@ -22,7 +22,7 @@ The package is best imported using:
 
 ## single_chain
 
-The package contains a library of 'single_chain' classes corresponding to different single-chain models. For example, 
+The package contains a `single_chain` module of classes corresponding to different single-chain models. For example, 
 
 	single_chain_model = ideal(N_b = 88)
 	
@@ -40,7 +40,7 @@ returns the probability density that a chain is both intact and at a nondimensio
 
 ## network
 
-The `network` file contains a few classes, most notably the `deform_network` class. Given an applied deformation, like
+The `network` module contains a few classes, most notably the `deform_network` class. Given an applied deformation, such as
 
 	def F(t): return 1 + t
 	
@@ -48,7 +48,7 @@ the total testing time in seconds, the deformation mode (currently supports 'uni
 
 	network_model = deform_network(F, 'uniaxial', 3, single_chain_model, ignore_yield = True, use_spatial_grid = False)
 	
-Since this initialization also prepares the solution method, many optional keyword arguments are available. Here we ignore the breaking of chains via meeting a yield surface at some critical extension (the ideal chain model is infinitely extensible), and we choose to utilize quadrature for spatial integrations rather than a pre-specified spatial grid; the converse in either case is the default. The examples that follow illustrate the critical aspects of creating the network model, and more information can be found in the helpful comments in the `network.py` file, as well as in the Appendix of our paper.
+Since this initialization also prepares the solution method, many optional keyword arguments are available. In this example we ignore the breaking of chains via meeting a yield surface at some critical extension (the ideal chain model is infinitely extensible) using `ignore_yield = True`, and we choose to utilize quadrature for spatial integrations rather than a pre-specified spatial grid using `use_spatial_grid = False`; the converse in either case is the default. The [Examples](#examples) that follow illustrate the critical aspects of creating the network model, and more information can be found in the helpful comments in the `network.py` file, as well as in the Appendix of our [paper](https://arxiv.org/abs/2104.08866).
 
 The results (stress, total probability that a chain is intact, etc.) are solved for over the specified testing time using
 
@@ -56,9 +56,17 @@ The results (stress, total probability that a chain is intact, etc.) are solved 
 	
 where the optional keyword argument here is used to write the results to a .csv file. The default is None (no .csv file is written).
 
+## relaxation_function
+
+The `relaxation_function` module contains several different classes corresponding to different relaxation functions, `.g(t, tau)`, as well as their derivatives, `.d_g_d_tau(t, tau)`, and their corresponding loss and storage functions, `.g_p(t, tau)` and `g_pp(t, tau)`. For example, 
+
+	sticky_Rouse(N_b = 50, N_x = 5, t_0 = 4e-4, beta_E_A = 10)
+	
+returns an object that is the sticky Rouse model (read more [here](https://dx.doi.org/10.1122/1.4818868) or [here](https://dx.doi.org/10.1039/D0SM01115K)) with 50 Kuhn monomers, 5 cross-links per chain, a Kuhn monomer relaxation time of 0.0001 seconds, and a nondimensional cross-link dissociation energy of 10. The relaxation function is an optional keyword argument when creating the network model (the default is None); see our [paper](https://arxiv.org/abs/2104.08866) for more details.
+
 ## plotting
 
-The object used for quick plotting is created using
+The `plotting` module alows object for plotting to be quickly created, i.e.
 
 	plotter_object = plotter(plot_directory = './')
 
