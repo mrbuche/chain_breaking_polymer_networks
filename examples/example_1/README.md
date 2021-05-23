@@ -1,9 +1,8 @@
 # Example 1
 
-This is simplest self-complete example of using this package. [user_file.py](user_file.py) contains the full code.
+This is an example of using this package that is both simple and relevant.
 
-
-As always, begin by importing the package:
+[user_file.py](user_file.py) contains the full code. Begin by importing the package:
 
 	from chain_breaking_polymer_networks import *
 	
