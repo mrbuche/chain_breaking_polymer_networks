@@ -1,7 +1,5 @@
 # Example 2
 
-# Example 1
-
 This is an example of using the `relaxation_function` module of this package.
 
 [user_file.py](user_file.py) contains the full code. Begin by importing the package:
