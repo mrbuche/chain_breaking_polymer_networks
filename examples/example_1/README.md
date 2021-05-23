@@ -48,14 +48,15 @@ The plotting object is then created and used to plot (saving the image in the lo
 	
 ## Deformation
 
-
+Choosing unaxial stress (default in `deform_network`), the applied stretch is specified as a function of time here:
 
 	strain_rate = 1
 	maximum_strain = 8
 	total_time_in_seconds = 2*maximum_strain/strain_rate
 	def F(t): return 1 + strain_rate*t*np.heaviside(maximum_strain - strain_rate*t, 0.5) + (2*maximum_strain - strain_rate*t)*np.heaviside(strain_rate*t - maximum_strain, 0.5)
-
-Using the same plotting object, 
+	
+This corresponds to a normalized strain rate until a stretch of 9 is reached, and subequently reversing the rate until at a stretch of unity.
+Using the same plotting object, this applied stretch is plotted as a function of time:
 
 	plotter_object.plot_deformation(F, total_time_in_seconds)
 	
@@ -70,11 +71,16 @@ Using the same plotting object,
 	
 ## Network model, results
 
-	# Apply the deformation and solve
+The model for the network is created by simultaneously specifying the applied stretch and traction boundary condition, the total time, the single-chain model, and increasing the suggestion for the number of spatial grid points in each direction:
+
 	network_model = deform_network(F, 'uniaxial', total_time_in_seconds, single_chain_model, num_grid_suggestion = 513)
+
+This model is solved and results are returned as an object, while also writing these results to a .csv file in the local directory:
+	
 	results = network_model.solve(csv_directory = './')
 
-	# Plot the results
+Using the same plotting object, these results (stress, total intact-chain probability, total breaking/reforming/net rate) are plotted:
+
 	plotter_object.plot_results(network_model, results)
 	
 <table>
