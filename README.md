@@ -62,7 +62,7 @@ The `relaxation_function` module contains several different classes correspondin
 
 	sticky_Rouse(N_b = 50, N_x = 5, t_0 = 4e-4, beta_E_A = 10)
 	
-returns an object that is the sticky Rouse model (read more [here](https://dx.doi.org/10.1122/1.4818868) or [here](https://dx.doi.org/10.1039/D0SM01115K)) with 50 Kuhn monomers, 5 cross-links per chain, a Kuhn monomer relaxation time of 0.0001 seconds, and a nondimensional cross-link dissociation energy of 10. The relaxation function is an optional keyword argument when creating the network model (the default is None); see our [paper](https://arxiv.org/abs/2104.08866) for more details.
+returns an object that is the sticky Rouse model with 50 Kuhn monomers, 5 cross-links per chain, a Kuhn monomer relaxation time of 0.0001 seconds, and a nondimensional cross-link dissociation energy of 10 (read more [here](https://dx.doi.org/10.1122/1.4818868) or [here](https://dx.doi.org/10.1039/D0SM01115K)). The relaxation function is an optional keyword argument when creating the network model (the default is None); see our [paper](https://arxiv.org/abs/2104.08866) for more details.
 
 ## plotting
 
@@ -70,7 +70,7 @@ The `plotting` module alows object for plotting to be quickly created, i.e.
 
 	plotter_object = plotter(plot_directory = './')
 
-where the default for the optional keyword argument is shown (the current directory). The plotter() class is the only instance requiring matplotlib in this package. The single-chain model functions can be plotted using
+where the default for the optional keyword argument is shown (the current directory). The `plotter()` class is the only instance requiring `matplotlib` in this package. The single-chain model functions can be plotted using
 
 	plotter_object.plot_single_chain(single_chain_model)
 	
