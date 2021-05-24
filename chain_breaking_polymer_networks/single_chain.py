@@ -261,10 +261,10 @@ class EFJC:
 class Morse_FJC:
 
 	# For more information, see:
-	# 	(title)
+	# 	Chain breaking in the statistical mechanical constitutive theory of polymer networks
 	# 	Michael R. Buche and Meredith N. Silberstein
-	#	(journal)
-	# 	doi.org/
+	#	Preprint submitted to Journal of the Mechanics and Physics of Solids
+	# 	arxiv.org/abs/2104.08866
 
 	# Class initialization
 	def __init__(self, **kwargs):

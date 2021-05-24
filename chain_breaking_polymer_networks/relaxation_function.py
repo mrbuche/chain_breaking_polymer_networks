@@ -24,10 +24,10 @@ class Long_et_al_2014:
 	# 	Macromolecules 2016, 49, 3497−3507
 	#	doi.org/10.1021/acs.macromol.6b00421
 	# See also:
-	# 	(title)
+	# 	Chain breaking in the statistical mechanical constitutive theory of polymer networks
 	# 	Michael R. Buche and Meredith N. Silberstein
-	#	(journal)
-	# 	doi.org/
+	#	Preprint submitted to Journal of the Mechanics and Physics of Solids
+	# 	arxiv.org/abs/2104.08866
 
 	def __init__(self, **kwargs):
 
