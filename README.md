@@ -44,7 +44,7 @@ The `network` module contains a few classes, most notably the `deform_network` c
 
 	def F(t): return 1 + t
 	
-the total testing time in seconds, the deformation mode (currently supports 'uniaxial' and 'equibiaxial' stress; the deformation is of course incompressible), and a, the `deform_network` class is used to create a network model from the single-chain model. Here we apply uniaxial stress for 3 seconds:
+the total testing time in seconds, the deformation mode (currently supports 'uniaxial' and 'equibiaxial' stress; the deformation is of course incompressible), and a single-chain model, the `deform_network` class is used to create a network model from the single-chain model. Here we apply uniaxial stress for 3 seconds:
 
 	network_model = deform_network(F, 'uniaxial', 3, single_chain_model, ignore_yield = True, use_spatial_grid = False)
 	
