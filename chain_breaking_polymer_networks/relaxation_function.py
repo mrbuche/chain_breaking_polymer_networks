@@ -16,12 +16,12 @@ class Long_et_al_2014:
 	# For more information, see:
 	# 	Time Dependent Behavior of a Dual Cross-Link Self-Healing Gel: Theory and Experiments
 	# 	Rong Long, Koichi Mayumi, Costantino Creton, Tetsuharu Narita, and Chung-Yuen Hui
-	# 	Macromolecules 2014, 47, 7243−7250
+	# 	Macromolecules 2014, 47, 7243-7250
 	# 	doi.org/10.1021/ma501290h
 	# See also:
 	#	Mechanics of a Dual Cross-Link Gel with Dynamic Bonds: Steady State Kinetics and Large Deformation Effects
 	# 	Jingyi Guo, Rong Long, Koichi Mayumi, and Chung-Yuen Hui
-	# 	Macromolecules 2016, 49, 3497−3507
+	# 	Macromolecules 2016, 49, 3497-3507
 	#	doi.org/10.1021/acs.macromol.6b00421
 	# See also:
 	# 	Chain breaking in the statistical mechanical constitutive theory of polymer networks
@@ -85,7 +85,7 @@ class Rouse:
 	# For more information, see:
 	# 	A Theory of the Linear Viscoelastic Properties of Dilute Solutions of Coiling Polymers 
 	#	Prince E Rouse
-	#	Journal of Chemical Physics, 1953, 21, 1272–1280
+	#	Journal of Chemical Physics, 1953, 21, 1272-1280
 	#	doi.org/10.1063/1.1699180
 	# See also:
 	#	Extensions of the Rouse Theory of Viscoelastic Properties to Undiluted Linear Polymers
@@ -94,7 +94,7 @@ class Rouse:
 	#	doi.org/10.1063/1.1721997
 	# See also:
 	# 	Bridging experiments and theory: 
-	#		isolating the effects of metal–ligand interactions on viscoelasticity of reversible polymer networks
+	#		isolating the effects of metal-ligand interactions on viscoelasticity of reversible polymer networks
 	# 	Xinyue Zhang, Yuval Vidavsky, Sinai Aharonovich, Steven J. Yang, Michael R. Buche, 
 	#		Charles E. Diesendruck and Meredith N. Silberstein
 	#	Soft Matter, 2020, 16, 8591-8601
@@ -155,7 +155,7 @@ class Rouse:
 		return g_pp_out
 
 ################################################################################################################################
-# 
+# Relaxation function for the sticky Rouse model
 ################################################################################################################################
 
 class sticky_Rouse:
@@ -167,7 +167,7 @@ class sticky_Rouse:
 	#	doi.org/10.1122/1.4818868
 	# See also:
 	# 	Bridging experiments and theory: 
-	#		isolating the effects of metal–ligand interactions on viscoelasticity of reversible polymer networks
+	#		isolating the effects of metal-ligand interactions on viscoelasticity of reversible polymer networks
 	# 	Xinyue Zhang, Yuval Vidavsky, Sinai Aharonovich, Steven J. Yang, Michael R. Buche, 
 	#		Charles E. Diesendruck and Meredith N. Silberstein
 	#	Soft Matter, 2020, 16, 8591-8601
