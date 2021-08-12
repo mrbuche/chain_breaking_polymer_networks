@@ -2,9 +2,9 @@
 
 [![DOI:10.5281/zenodo.4699349](https://mbuche.github.io/web/badges/zenodo.4699349.svg)](https://doi.org/10.5281/zenodo.4699349) &nbsp; [![GitHub release](https://mbuche.github.io/web/badges/releasev1.0.1.svg)](https://github.com/mbuche/chain_breaking_polymer_networks/releases/) &nbsp; [![PyPI pyversions](https://mbuche.github.io/web/badges/python3.7.svg)](https://pypi.org/project/chain-breaking-polymer-networks/) &nbsp; [![GitHub license](https://mbuche.github.io/web/badges/licenseMIT.svg)](https://github.com/mbuche/chain_breaking_polymer_networks/blob/master/LICENSE)
 
-This is the Python package corresponding to "Chain breaking in the statistical mechanical constitutive theory of polymer networks" by Michael R. Buche and Meredith N. Silberstein, 2021.
+This is the Python package corresponding to: Buche, Michael R., and Meredith N. Silberstein. Chain breaking in the statistical mechanical constitutive theory of polymer networks. Journal of the Mechanics and Physics of Solids (2021).
 
-[![arXiv:2104.08866](https://mbuche.github.io/web/badges/badgearXiv210408866.svg)](https://arxiv.org/abs/2104.08866) 
+[![DOI:10.1016/j.jmps.2021.104593](https://mbuche.github.io/web/badges/j.jmps.2021.104593.svg)](https://doi.org/10.1016/j.jmps.2021.104593) 
 
 # Installation
 
