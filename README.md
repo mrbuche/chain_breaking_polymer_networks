@@ -1,10 +1,11 @@
 # chain_breaking_polymer_networks
 
-[![DOI:10.5281/zenodo.4699349](https://mbuche.github.io/web/badges/zenodo.4699349.svg)](https://doi.org/10.5281/zenodo.4699349) &nbsp; [![GitHub release](https://mbuche.github.io/web/badges/releasev1.0.1.svg)](https://github.com/mbuche/chain_breaking_polymer_networks/releases/) &nbsp; [![PyPI pyversions](https://mbuche.github.io/web/badges/python3.7.svg)](https://pypi.org/project/chain-breaking-polymer-networks/) &nbsp; [![GitHub license](https://mbuche.github.io/web/badges/licenseMIT.svg)](https://github.com/mbuche/chain_breaking_polymer_networks/blob/master/LICENSE)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/chain_breaking_polymer_networks.svg?logo=python&logoColor=FBE072)](https://pypi.org/project/chain-breaking-polymer-networks/)
+[![pypi](https://img.shields.io/pypi/v/chain_breaking_polymer_networks?logo=pypi&logoColor=FBE072)](https://pypi.org/project/chain_breaking_polymer_networks/)
+[![GitHub license](https://img.shields.io/github/license/mrbuche/chain_breaking_polymer_networks)](https://github.com/mrbuche/chain_breaking_polymer_networks/blob/master/LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4695394.svg)](https://doi.org/10.5281/zenodo.4695394)
 
-This is the Python package corresponding to: Buche, Michael R., and Meredith N. Silberstein. Chain breaking in the statistical mechanical constitutive theory of polymer networks. Journal of the Mechanics and Physics of Solids (2021).
-
-[![DOI:10.1016/j.jmps.2021.104593](https://mbuche.github.io/web/badges/j.jmps.2021.104593.svg)](https://doi.org/10.1016/j.jmps.2021.104593) 
+This is the Python package corresponding to: Buche, Michael R., and Meredith N. Silberstein. Chain breaking in the statistical mechanical constitutive theory of polymer networks. [Journal of the Mechanics and Physics of Solids (2021)](https://doi.org/10.1016/j.jmps.2021.104593).
 
 # Installation
 
